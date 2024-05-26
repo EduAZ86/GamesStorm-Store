@@ -1,0 +1,35 @@
+<div class="
+min-w-32 min-h-64
+max-w-40 max-h-72
+flex flex-col
+relative
+bg-light-text rounded-sm
+p-1
+">
+    <img src={{image}} alt="game.png" class="w-full h-52 bg-red-400" />
+    <div class="w-full flex flex-col font-roboto  text-light-background">
+        <span class="py-1">
+            {{title}}
+        </span>
+        <div class=" w-full flex flex-row items-center justify-between ">
+            @if (discount > 0 ) {
+            <span class="w-fit h-fit bg-light-primary rounded-md p-1 text-sm">
+                - {{(discount*100).toString()}} %
+            </span>
+            <div class="w-fit flex flex-col text-sm">
+                <span>
+                    $ {{regularPrice}}.00
+                </span>
+                <span>
+                    $ {{(regularPrice-regularPrice*discount).toString()}}
+                </span>
+            </div>
+            } @else{
+            <span class="w-full text-center">
+                $ 14.50
+            </span>
+            }
+        </div>
+    </div>
+
+</div>
